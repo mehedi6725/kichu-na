@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:my_profile_2/DatabasePage.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -29,42 +28,51 @@ class ProfilePage extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "Mehedi Hasan",
-            style: TextStyle(fontSize: 40),
+            "Nazmus Sakib Saad",
+            style: TextStyle(fontSize: 20),
           ),
           Text(
-            "Department of CSE",
+            "Head of the Department",
             style: TextStyle(fontSize: 20),
           ),
           Text(
             "Magura Polytechnic Institute",
             style: TextStyle(fontSize: 20),
           ),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
-                width: 100,
-                height: 50,
-                color: Colors.blue,
-                child: Icon(Icons.add_location, size: 40,),
-              ),
-              Container(
-                width: 100,
-                height: 50,
-                color: Colors.greenAccent,
-                child: Icon(Icons.video_call, size: 40,),
-              ),
-              Container(
-                width: 100,
+                width: 150,
                 height: 50,
                 color: Colors.cyanAccent,
-                child: Icon(Icons.message, size: 40,),
+                child: Icon(
+                  Icons.video_call,
+                  size: 40,
+                ),
               ),
-
+              Container(
+                width: 150,
+                height: 50,
+                color: Colors.cyanAccent,
+                child: Icon(
+                  Icons.message,
+                  size: 40,
+                ),
+              ),
             ],
-          )
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> DatabasePage()));
+              },
+              child: Text("Click Me"),
+            ),
+          ),
         ],
       ),
     );
